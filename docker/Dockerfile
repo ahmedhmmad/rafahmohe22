@@ -39,10 +39,12 @@ RUN useradd -G www-data,root -u $uid -d /home/$user $user
 RUN mkdir -p /home/$user/.composer && \
     chown -R $user:$user /home/$user
 
-#RUN chmod -R 775 /var/www/storage
-#RUN chmod o+rx /var/lib/letsencrypt
+#
+#RUN chmod -R 777 storage bootstrap/cache
+
 # Change current user to www
 USER $user
 
 # Expose port 9000 and start php-fpm server
 EXPOSE 9000
+
