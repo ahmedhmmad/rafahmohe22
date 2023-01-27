@@ -11,13 +11,6 @@ services:
         volumes:
             - ./:/var/www/
             - $HOME/.composer/:$HOME/.composer/
-        environment:
-            - "DB_HOST=mysql"
-            - "DB_DATABASE=rafahmoheweb"
-            - "DB_USERNAME=rafahmohe_admin"
-            - "DB_PASSWORD=admin@rafahmohe"
-            - "REDIS_HOST=redis"
-            - "REDIS_PORT=6379"
         networks:
             - service-network
 
@@ -49,10 +42,10 @@ services:
         volumes:
             - mysqldata:/var/lib/mysql
         environment:
-            - "MYSQL_ROOT_PASSWORD=admin@rafahmohe"
-            - "MYSQL_DATABASE=rafahmoheweb"
-            - "MYSQL_USER=rafahmohe_admin"
-            - "MYSQL_PASSWORD=admin@rafahmohe"
+            - "MYSQL_ROOT_PASSWORD=secret"
+            - "MYSQL_DATABASE=rafahmoheapp"
+            - "MYSQL_USER=rafahmohe"
+            - "MYSQL_PASSWORD=secret"
         ports:
             - "3306:3306"
         networks:
