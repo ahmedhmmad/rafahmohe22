@@ -42,14 +42,16 @@ services:
         volumes:
             - mysqldata:/var/lib/mysql
         environment:
-            - "MYSQL_ROOT_PASSWORD=secret"
-            - "MYSQL_DATABASE=rafahmoheapp"
-            - "MYSQL_USER=rafahmohe"
-            - "MYSQL_PASSWORD=secret"
+            - "MYSQL_ROOT_PASSWORD=${DB_PASSWORD}"
+            - "MYSQL_DATABASE=${DB_DATABASE}"
+            - "MYSQL_USER=${DB_USERNAME}"
+            - "MYSQL_PASSWORD=${DB_PASSWORD}"
         ports:
             - "3306:3306"
         networks:
             - service-network
+        env_file:
+            - ./docker-compose.env
 
     phpmyadmin:
         image: phpmyadmin
