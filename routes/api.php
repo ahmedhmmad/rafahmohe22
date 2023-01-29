@@ -20,4 +20,5 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/welcome',[\App\Http\Controllers\Admin\HomePageController::class,'welcome']);
 Route::get('/departments',[\App\Http\Controllers\Admin\DepartmentsController::class,'selectAll']);
+Route::post('/contactus',[\App\Http\Controllers\Admin\ContactUsController::class,'sendMessage']);
 
