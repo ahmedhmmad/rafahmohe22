@@ -21,4 +21,13 @@ use Illuminate\Support\Facades\Route;
 Route::get('/welcome',[\App\Http\Controllers\Admin\HomePageController::class,'welcome']);
 Route::get('/departments',[\App\Http\Controllers\Admin\DepartmentsController::class,'selectAll']);
 Route::post('/contactus',[\App\Http\Controllers\Admin\ContactUsController::class,'sendMessage']);
+//Ads
+Route::get('/viewAds',[\App\Http\Controllers\Admin\AdsController::class,'viewAds']);
+Route::post('/ads',[\App\Http\Controllers\Admin\AdsController::class,'addAds']);
+
+//Social
+
+Route::get('/viewSocial',[\App\Http\Controllers\Admin\SocialEventsController::class,'viewSocial']);
+Route::post('/addSocial',[\App\Http\Controllers\Admin\SocialEventsController::class,'addSocial']);
+
 
