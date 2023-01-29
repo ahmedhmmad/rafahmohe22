@@ -23,7 +23,7 @@ Route::get('/departments',[\App\Http\Controllers\Admin\DepartmentsController::cl
 Route::post('/contactus',[\App\Http\Controllers\Admin\ContactUsController::class,'sendMessage']);
 //Ads
 Route::get('/viewAds',[\App\Http\Controllers\Admin\AdsController::class,'viewAds']);
-Route::post('/ads',[\App\Http\Controllers\Admin\AdsController::class,'addAds']);
+Route::post('/addAds',[\App\Http\Controllers\Admin\AdsController::class,'addAds']);
 
 //Social
 
