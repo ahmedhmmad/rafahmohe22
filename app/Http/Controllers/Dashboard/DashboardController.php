@@ -11,7 +11,7 @@ class DashboardController extends Controller
    {
        if (Auth::check())
        {
-           return view('dashboard.index');
+           return view('layouts.dashboard');
        }
        else
            return redirect('/access-denied');

@@ -33,3 +33,5 @@ Route::middleware([
         return Inertia::render('Dashboard');
     })->name('dashboard');
 });
+
+Route::get('/newsdashboard',[\App\Http\Controllers\Dashboard\DashboardController::class,'dashboard'])->name('dashboard');
